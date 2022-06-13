@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Course;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -14,7 +15,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        $categories = Category::with('course')->get();
+        return view('course.course', compact('categories'));
     }
 
     /**
@@ -24,7 +26,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('category.create');
     }
 
     /**
@@ -35,7 +37,13 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validateData = $request->validate([
+            'name' => 'required'
+        ]);
+
+        Course::create($validateData);
+        $validateData['name'] = ucwords($validateData['name']);
+        return redirect('/course')->with('Success','Category berhasi ditambahkan');
     }
 
     /**
@@ -46,7 +54,7 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        //
+        return view('category.detail', compact('category'));
     }
 
     /**
@@ -80,6 +88,7 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        //
+        Category::destroy($category->id);
+        return redirect('/course')->with('Success','Category berhasil dihapus');
     }
 }

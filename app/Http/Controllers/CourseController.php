@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Course;
+use App\Models\Mentor;
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
@@ -15,9 +16,9 @@ class CourseController extends Controller
      */
     public function index()
     {
-        // menampilkan nilai dari categori beserta relasi categorinya
-        $categories = Category::with('course')->get();
-        return view('course.course', compact('categories'));
+       $categories = Category::with('course')->get();
+       $mentors = Mentor::with('course')->get();
+       return view('course.course', compact(['categories','mentors']));
     }
 
     /**
@@ -29,7 +30,8 @@ class CourseController extends Controller
     {
         // mengarahkan ke halaman form create course
         return view('course.create',[
-            'categories' => Category::all()
+            'categories' => Category::all(),
+            'mentors' => Mentor::all()
         ]);
     }
 
@@ -45,6 +47,7 @@ class CourseController extends Controller
         $request->validate([
             'title' => 'required',
             'category_id' => 'required',
+            'mentor_id' => 'required',
             'desc' => 'required',
             'image' => 'required|file|max:1024'
         ]);
@@ -74,7 +77,10 @@ class CourseController extends Controller
      */
     public function show(Course $course)
     {
-        return view('course.detail', compact('course'));
+        return view('course.detail',[
+            'categories' => Category::all(),
+            'mentors' => Mentor::all()
+        ], compact('course'));
     }
 
     /**
@@ -87,7 +93,8 @@ class CourseController extends Controller
     {
         // mengembalikan ke halaman edit beserta value dari category
         return view('course.edit',[
-            'categories' => Category::all()
+            'categories' => Category::all(),
+            'mentors' => Mentor::all()
         ],compact('course'));
     }
 
@@ -103,6 +110,7 @@ class CourseController extends Controller
         $request->validate([
             'title' => 'required',
             'category_id' => 'required',
+            'mentor_id' => 'required',
             'desc' => 'required',
             'image' => 'required|file|max:1024'
         ]);
