@@ -92,7 +92,7 @@ class KategoriController extends Controller
 
         return redirect('/blogs')->with('Success','Kategori berhasi diubah');
     }
-
+    
     /**
      * Remove the specified resource from storage.
      *
