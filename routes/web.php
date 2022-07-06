@@ -1,11 +1,18 @@
 <?php
-
+// Authentication
 use App\Http\Controllers\Auth\AuthController;
-use App\Http\Controllers\BlogController;
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\CourseController;
-use App\Http\Controllers\KategoriController;
+
+// Admin Controller
+use App\Http\Controllers\Admin\CourseController;
+use App\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\Admin\KategoriController;
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\MentorController;
+// UserController
 use App\Http\Controllers\User\DashboardController;
+
+// NonuserController
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,6 +30,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::resource('/course', CourseController::class);
 
+Route::resource('/mentors', MentorController::class);
+
 Route::controller(CategoryController::class)->group(function(){
     Route::get('/categories','index');
     Route::get('categories/create','create');
@@ -31,9 +40,9 @@ Route::controller(CategoryController::class)->group(function(){
 });
 
 Route::controller(AuthController::class)->group(function(){
-    Route::get('/register','userRegister');
+    Route::get('/register','userRegister')->middleware('guest');
     Route::post('/register','register');
-    Route::get('/login','userLogin');
+    Route::get('/login','userLogin')->middleware('guest')->name('login');
     Route::post('/login','login');
     Route::post('/logout','logout');
 });
@@ -42,4 +51,4 @@ Route::resource('/blogs',BlogController::class);
 
 Route::resource('/kategoris',KategoriController::class);
 
-Route::get('/user',[DashboardController::class,'dashboard']);
+Route::get('/user',[DashboardController::class,'dashboard'])->middleware('auth');

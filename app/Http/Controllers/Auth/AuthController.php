@@ -47,7 +47,7 @@ class AuthController extends Controller
         {
             $request->session()->regenerate();
 
-            return redirect()->intended('/');
+            return redirect()->intended('/user');
         }
         
         return back()->with('loginErr','Please login again!!!');
