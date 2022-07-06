@@ -1,4 +1,6 @@
 <?php
+use Illuminate\Support\Facades\Route;
+
 // Authentication
 use App\Http\Controllers\Auth\AuthController;
 
@@ -13,25 +15,14 @@ use App\Http\Controllers\User\DashboardController;
 
 // NonuserController
 
-use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 
 
+// Admin
 Route::resource('/course', CourseController::class);
-
 Route::resource('/mentors', MentorController::class);
-
+Route::resource('/blogs',BlogController::class);
+Route::resource('/kategoris',KategoriController::class);
 Route::controller(CategoryController::class)->group(function(){
     Route::get('/categories','index');
     Route::get('categories/create','create');
@@ -39,6 +30,7 @@ Route::controller(CategoryController::class)->group(function(){
     Route::delete('categories/{category}','destroy');
 });
 
+// Authentication
 Route::controller(AuthController::class)->group(function(){
     Route::get('/register','userRegister')->middleware('guest');
     Route::post('/register','register');
@@ -47,8 +39,9 @@ Route::controller(AuthController::class)->group(function(){
     Route::post('/logout','logout');
 });
 
-Route::resource('/blogs',BlogController::class);
-
-Route::resource('/kategoris',KategoriController::class);
-
+// User
 Route::get('/user',[DashboardController::class,'dashboard'])->middleware('auth');
+
+
+
+
