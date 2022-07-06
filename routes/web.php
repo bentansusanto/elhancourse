@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\KategoriController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\MentorController;
+use App\Http\Controllers\Nonuser\HomeController;
 // UserController
 use App\Http\Controllers\User\DashboardController;
 
@@ -38,6 +39,9 @@ Route::controller(AuthController::class)->group(function(){
     Route::post('/login','login');
     Route::post('/logout','logout');
 });
+
+// Nonuser
+Route::get('/',[HomeController::class,'home']);
 
 // User
 Route::get('/user',[DashboardController::class,'dashboard'])->middleware('auth');
