@@ -3,14 +3,15 @@
 namespace App\Http\Controllers\Nonuser;
 
 use App\Http\Controllers\Controller;
-use App\Models\Mentor;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function home()
     {
-        return view('nonuser.home');
+        $categories = Category::all();
+        return view('nonuser.home',compact('categories'));
     }
 
 }

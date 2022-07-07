@@ -1,4 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 
+/* All */
+.btn{
+    background-color: #0E3EDA;
+}
+
+/* Navbar */
+.nav-link{
+    font-weight: 500;
+    color: #000;
+}
+.nav-link:hover{
+    color: #0E3EDA !important;
+}
+.nav-log{
+    font-weight: 500;
+}
+
+/* Hero Section */
+.heros h1{
+    font-weight: 700;
+}
+
+/* Categoris Section */
+.kategori{
+    margin-top: 200px;
+}
+.kategori h4{
+    color: #ED1675;
+    font-size: .9rem;
+}
+.kategori h2{
+    font-weight: 600;
+}
+
+.kategoris{
+    background-color: #f5f5f5;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #000;
+    transition: all .3s ease-out;
+}
+.kategoris:hover{
+    background-color: #ffff;
+    box-shadow: 0 15px 30px 0 rgba(0,0,0,0.1);
+}
+.kategoris h5{
+    font-size: 1.2rem;
+}
+.kategoris p{
+    font-size: .9rem;
+    color: #a4a4a4;
+}
+
+/* Service Section */
 
 
 
@@ -6,29 +66,311 @@
 /* Large Desktop */
 @media(min-width: 1200px)
 {
+    /* Navbar */
+    .navbar{
+        margin: auto 10px;
+    }
+    .navbar-brand img{
+        width: 2rem;
+    }
+    .navbar-nav{
+        margin-top: 15px;
+        margin-left: 50px;
+    }
+    .nav-link{
+        margin-left: 30px;
+    }
+    .sign-inup{
+        margin-left: auto;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .nav-log{
+        display: inline;
+    }
+    .nav-log:first-child{
+        text-align: center;
+        margin-right: 20px;
+    }
+    .nav-log:nth-child(2){
+        padding: auto;
+        margin: 10px auto;
+    }
 
+    /* Hero Section */
+    .heros{
+        margin-top: 100px;
+        margin-left: 100px;
+        text-align: left;
+    }
+    .heros img{
+        width: 80%;
+    }
+    .heros h1{
+        margin-top: 50px;
+        font-size: 4rem;
+    }
+    .heros p{
+        font-size: 1rem;
+        width: 25rem;
+        margin: 10px 0;
+    }
+
+    /* Categori Section */
+    .kategori h2{
+        font-size: 1.5rem;
+    }
+    .kategoris{
+        width: 18rem;
+        margin: 10px 10px;
+    }
 }
 
 /* Middle Desktop */
 @media(min-width: 1025px) and (max-width: 1199px)
 {
+    /* Navbar */
+    .navbar{
+        margin: auto 10px;
+    }
+    .navbar-brand img{
+        width: 2rem;
+    }
+    .navbar-nav{
+        margin-top: 15px;
+        margin-left: 50px;
+    }
+    .nav-link{
+        margin-left: 10px;
+    }
+    .sign-inup{
+        margin-left: auto;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .nav-log{
+        display: inline;
+    }
+    .nav-log:first-child{
+        text-align: center;
+        margin-right: 20px;
+    }
+    .nav-log:nth-child(2){
+        padding: auto;
+        margin: 10px auto;
+    }
 
+    /* Hero Section */
+    .heros{
+        margin-top: 100px;
+        margin-left: 100px;
+        text-align: left;
+    }
+    .heros img{
+        width: 80%;
+    }
+    .heros h1{
+        margin-top: 50px;
+        font-size: 2.3rem;
+    }
+    .heros p{
+        font-size: 1rem;
+        width: 20rem;
+        margin: 10px 0;
+    }
+
+    /* Categori Section */
+    .kategori h2{
+        font-size: 1.5rem;
+    }
+    .kategoris{
+        width: 18rem;
+        margin: 10px 10px;
+    }
 }
 
 /* Desktop */
 @media(min-width: 992px) and (max-width: 1024px)
 {
+    /* Navbar */
+    .navbar{
+        margin: auto 10px;
+    }
+    .navbar-brand img{
+        width: 2rem;
+    }
+    .navbar-nav{
+        margin-top: 15px;
+        margin-left: 50px;
+    }
+    .nav-link{
+        margin-left: 10px;
+    }
+    .sign-inup{
+        margin-left: auto;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .nav-log{
+        display: inline;
+    }
+    .nav-log:first-child{
+        text-align: center;
+        margin-right: 20px;
+    }
+    .nav-log:nth-child(2){
+        padding: auto;
+        margin: 10px auto;
+    }
 
+    /* Hero Section */
+    .heros{
+        margin-top: 100px;
+        margin-left: 100px;
+        text-align: left;
+    }
+    .heros img{
+        width: 70%;
+    }
+    .heros h1{
+        margin-top: 50px;
+        font-size: 2.3rem;
+    }
+    .heros p{
+        font-size: 1rem;
+        width: 20rem;
+        margin: 10px 0;
+    }
+
+    /* Categori Section */
+    .kategori h2{
+        font-size: 1.5rem;
+    }
+    .kategoris{
+        width: 18rem;
+        margin: 10px 10px;
+    }
 }
 
 /* Tablet */
 @media(min-width: 768px) and (max-width: 991px)
 {
+    /* Navbar */
+    .navbar{
+        margin: auto 10px;
+    }
+    .navbar-brand img{
+        width: 2rem;
+    }
+    .navbar-nav{
+        margin-top: 15px;
+    }
+    .nav-link{
+        margin-left: none;
+    }
+    .sign-inup{
+        margin-left: none;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .nav-log{
+        display: block;
+    }
+    .nav-log:first-child{
+        text-align: center;
+    }
+    .nav-log:nth-child(2){
+        padding: auto;
+        margin: 10px auto;
+    }
 
+    /* Hero Section */
+    .heros{
+        margin-top: 50px;
+        margin-left: unset;
+        text-align: center;
+    }
+    .heros img{
+        width: 70%;
+    }
+    .heros h1{
+        margin-top: 50px;
+        font-size: 2.3rem;
+    }
+    .heros p{
+        font-size: 1rem;
+        width: 25rem;
+        margin: 10px auto;
+    }
+
+    /* Categori Section */
+    .kategori h2{
+        font-size: 1.5rem;
+    }
+    .kategoris{
+        width: 18rem;
+        margin: 10px 10px;
+    }
 }
 
 /* Handphone */
 @media(max-width: 767px)
 {
+    /* Navbar */
+    .navbar{
+        margin: auto 10px;
+    }
+    .navbar-brand img{
+        width: 2rem;
+    }
+    .navbar-nav{
+        margin-top: 15px;
+    }
+    .nav-link{
+        margin-left: none;
+    }
+    .sign-inup{
+        margin-left: none;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .nav-log{
+        display: block;
+    }
+    .nav-log:first-child{
+        text-align: center;
+    }
+    .nav-log:nth-child(2){
+        width: 100%;
+        padding: auto;
+        margin-top: 10px;
+    }
 
+    /* Hero Section */
+    .heros{
+        margin-top: 50px;
+        margin-left: unset;
+        text-align: center;
+    }
+    .heros img{
+        width: 100%;
+    }
+    .heros h1{
+        margin-top: 50px;
+        font-size: 2.3rem;
+    }
+    .heros p{
+        font-size: 1rem;
+        width: 20rem;
+        margin: 10px auto;
+    }
+
+    /* Categoris Section */
+    .kategori h2{
+        font-size: 1.5rem;
+    }
+    .kategoris{
+        width: 20rem;
+        margin: 10px auto;
+    }
 }

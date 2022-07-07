@@ -21,9 +21,13 @@ use App\Http\Controllers\User\DashboardController;
 
 // Admin
 Route::resource('/course', CourseController::class);
+
 Route::resource('/mentors', MentorController::class);
+
 Route::resource('/blogs',BlogController::class);
+
 Route::resource('/kategoris',KategoriController::class);
+
 Route::controller(CategoryController::class)->group(function(){
     Route::get('/categories','index');
     Route::get('categories/create','create');

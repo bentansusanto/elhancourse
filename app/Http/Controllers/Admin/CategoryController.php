@@ -17,7 +17,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::with('course')->get();
-        return view('course.course', compact('categories'));
+        return view('admin.course.course', compact('categories'));
     }
 
     /**
@@ -27,7 +27,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('category.create');
+        return view('admin.course.category.create');
     }
 
     /**
@@ -55,7 +55,7 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        return view('category.detail', compact('category'));
+        return view('admin.course.category.detail', compact('category'));
     }
 
     /**
