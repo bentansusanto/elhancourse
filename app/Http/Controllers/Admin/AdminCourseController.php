@@ -8,7 +8,7 @@ use App\Models\Course;
 use App\Models\Mentor;
 use Illuminate\Http\Request;
 
-class CourseController extends Controller
+class AdminCourseController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,9 +17,9 @@ class CourseController extends Controller
      */
     public function index()
     {
-       $categories = Category::with('course')->get();
+       $categories = Category::with('courses')->get();
        $mentors = Mentor::with('course')->get();
-       return view('course.course', compact(['categories','mentors']));
+       return view('admin.course.course', compact(['categories','mentors']));
     }
 
     /**
@@ -30,7 +30,7 @@ class CourseController extends Controller
     public function create()
     {
         // mengarahkan ke halaman form create course
-        return view('course.create',[
+        return view('admin.course.create',[
             'categories' => Category::all(),
             'mentors' => Mentor::all()
         ]);
@@ -78,7 +78,7 @@ class CourseController extends Controller
      */
     public function show(Course $course)
     {
-        return view('course.detail',[
+        return view('admin.course.detail',[
             'categories' => Category::all(),
             'mentors' => Mentor::all()
         ], compact('course'));
@@ -93,7 +93,7 @@ class CourseController extends Controller
     public function edit(Course $course)
     {
         // mengembalikan ke halaman edit beserta value dari category
-        return view('course.edit',[
+        return view('admin.course.edit',[
             'categories' => Category::all(),
             'mentors' => Mentor::all()
         ],compact('course'));
@@ -125,7 +125,7 @@ class CourseController extends Controller
             $course->save();
         }
 
-        redirect('/course')->with('Success','Course berhasil di edit');
+        redirect('/courses')->with('Success','Course berhasil di edit');
 
     }
 
@@ -139,6 +139,6 @@ class CourseController extends Controller
     {
         Course::destroy($course->id);
 
-        return redirect('/course')->with('Success','Course berhasil di hapus');
+        return redirect('/courses')->with('Success','Course berhasil di hapus');
     }
 }
