@@ -59,6 +59,19 @@
       </div>
     </div>
 
+    {{-- Services --}}
+    <div class="service">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <img src="{{asset('image/nonuser/img-home/bg-sec3.png')}}">
+          </div>
+          <div class="col-12 col-lg-6">
+            <h2>The World’s Largest Selection of Courses and Books</h2>
+          </div>
+        </div>
+      </div>
+    </div>
   @section('footer')
 
 @endsection

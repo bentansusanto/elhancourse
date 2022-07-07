@@ -59,7 +59,9 @@
 }
 
 /* Service Section */
-
+.service h2{
+    font-weight: 600;
+}
 
 
 /* Responsive */
@@ -372,5 +374,18 @@
     .kategoris{
         width: 20rem;
         margin: 10px auto;
+    }
+
+    /* Service Section */
+    .service{
+        margin-top: 200px;
+        text-align: center;
+    }
+    .service img{
+        width: 22rem;
+    }
+    .service h2{
+        margin-top: 50px;
+        font-size: 1.5rem;
     }
 }
