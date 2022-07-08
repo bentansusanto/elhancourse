@@ -60,8 +60,59 @@
 
 /* Service Section */
 .service h2{
+    font-weight: 700;
+}
+.content{
+    margin: 40px 0;
+}
+.icon{
+    background-color: #f3f3f3;
+    padding: 8px 10px;
+    border-radius: 10px;
+    color: #a4a4a4;
+    transition: all .3s ease-out;
+}
+.icon:hover{
+    background-color: #ffff;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.1);
+    color: #000;
+}
+
+/* Comments */
+.comments{
+    margin-top: 200px;
+}
+.comments h4{
+    color: #ED1675;
+    font-size: .9rem;
+}
+.comments h2{
     font-weight: 600;
 }
+.comment{
+    margin-top: 50px;
+    padding: 10px;
+}
+.comment1{
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    transition: all .3s ease-out;
+}
+.comment1:hover{
+    background-color: #ffff;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.1);
+}
+.comment1 h5{
+    font-weight: 600;
+}
+.comment1 p{
+    font-size: .9rem;
+}
+.comment1 p:nth-child(3){
+    color: #a4a4a4;
+}
+
+
 
 
 /* Responsive */
@@ -110,7 +161,7 @@
     }
     .heros h1{
         margin-top: 50px;
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
     .heros p{
         font-size: 1rem;
@@ -126,6 +177,31 @@
         width: 18rem;
         margin: 10px 10px;
     }
+
+    /* Service Section */
+    .service{
+        margin-top: 200px;
+        text-align: left;
+    }
+    .service img{
+        width: 65%;
+    }
+    .service h2{
+        margin: unset;
+        width: 80%;
+        font-size: 2rem;
+    }
+    .icon{
+        margin: 10px 0;
+        width: 22rem;
+    }
+
+     /* Comments */
+    .comments h2{
+        width: 22rem;
+        font-size: 1.6rem;
+    }
+    
 }
 
 /* Middle Desktop */
@@ -189,6 +265,30 @@
         width: 18rem;
         margin: 10px 10px;
     }
+
+    /* Service Section */
+    .service{
+        margin-top: 200px;
+        text-align: left;
+    }
+    .service img{
+        width: 70%;
+    }
+    .service h2{
+        margin: unset;
+        width: 90%;
+        font-size: 1.7rem;
+    }
+    .icon{
+        margin: 10px 0;
+        width: 20rem;
+    }
+
+    /* Comments */
+    .comments h2{
+        width: 22rem;
+        font-size: 1.6rem;
+    }
 }
 
 /* Desktop */
@@ -232,7 +332,7 @@
         text-align: left;
     }
     .heros img{
-        width: 70%;
+        width: 75%;
     }
     .heros h1{
         margin-top: 50px;
@@ -246,11 +346,35 @@
 
     /* Categori Section */
     .kategori h2{
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
     .kategoris{
         width: 18rem;
         margin: 10px 10px;
+    }
+
+    /* Service Section */
+    .service{
+        margin-top: 200px;
+        text-align: left;
+    }
+    .service img{
+        width: 60%;
+    }
+    .service h2{
+        margin: unset;
+        width: 90%;
+        font-size: 1.7rem;
+    }
+    .icon{
+        margin: 10px 0;
+        width: 20rem;
+    }
+
+     /* Comments */
+     .comments h2{
+        width: 22rem;
+        font-size: 1.6rem;
     }
 }
 
@@ -293,7 +417,7 @@
         text-align: center;
     }
     .heros img{
-        width: 70%;
+        width: 60%;
     }
     .heros h1{
         margin-top: 50px;
@@ -312,6 +436,30 @@
     .kategoris{
         width: 18rem;
         margin: 10px 10px;
+    }
+
+    /* Service Section */
+    .service{
+        margin-top: 200px;
+        text-align: center;
+    }
+    .service img{
+        width: 60%;
+    }
+    .service h2{
+        margin: 50px auto;
+        width: 70%;
+        font-size: 1.6rem;
+    }
+    .icon{
+        margin: 10px auto;
+        width: 22rem;
+    }
+
+    /* Comments */
+    .comments h2{
+        width: 20rem;
+        font-size: 1.6rem;
     }
 }
 
@@ -372,7 +520,7 @@
         font-size: 1.5rem;
     }
     .kategoris{
-        width: 20rem;
+        width: 15rem;
         margin: 10px auto;
     }
 
@@ -385,7 +533,27 @@
         width: 22rem;
     }
     .service h2{
-        margin-top: 50px;
+        margin: 50px auto;
+        width: 90%;
         font-size: 1.5rem;
+    }
+    .icon{
+        margin: 10px auto;
+        width: 22rem;
+    }
+
+    /* Comments */
+    .comments h2{
+        width: 20rem;
+        font-size: 1.5rem;
+    }
+    .comment1{
+        width: 100%;
+        margin-top: 15px;
+        padding: 10px 10px;
+    }
+    .profile{
+        position: relative;
+        margin-left: -80px;
     }
 }

@@ -67,7 +67,64 @@
             <img src="{{asset('image/nonuser/img-home/bg-sec3.png')}}">
           </div>
           <div class="col-12 col-lg-6">
-            <h2>The World’s Largest Selection of Courses and Books</h2>
+            <h2>The World’s Largest Selection of Courses and Books.</h2>
+            <div class=" row content">
+                <div class=" col-12 icon d-flex">
+                    <img class="mt-1" style="width: 2rem; height:2rem;" src="https://img.icons8.com/windows/100/000000/leanpub.png"><span><p class="mt-2 ms-3">10k Online Courses</p></span>
+                </div>
+                <div class=" col-12 icon d-flex">
+                    <img class="mt-1" style="width: 2.2rem; height:2.2rem;" src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/000000/external-reward-shopping-and-ecommerce-flatart-icons-outline-flatarticons.png"><span><p class="mt-2 ms-3">Expert Instruction</p></span>
+                </div>
+                <div class=" col-12 icon d-flex">
+                    <img class="mt-1" style="width: 2rem; height:2rem;" src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/60/000000/external-free-sales-vitaliy-gorbachev-lineal-vitaly-gorbachev.png"><span><p class="mt-2 ms-3">10k Online Courses</p></span>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{-- Comments members --}}
+    <div class="comments">
+      <div class="container">
+        <h4>Success Stories</h4>
+        <h2>What are other saying about us?</h2>
+        <div class="row comment">
+          <div class="col-12 col-lg-4 comment1">
+            <div class="row">
+              <div class="col-6">
+                <img src="{{asset('image/nonuser/img-home/people.png')}}">
+              </div>
+              <div class="col-6 profile">
+                <h5>Anindita putri</h5>
+                <p>Students</p> 
+              </div>
+            </div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, tempora.</p>
+          </div>
+          <div class="col-12 col-lg-4 comment1">
+            <div class="row">
+              <div class="col-6">
+                <img src="{{asset('image/nonuser/img-home/people.png')}}">
+              </div>
+              <div class="col-6 profile">
+                <h5>Anindita putri</h5>
+                <p>Students</p> 
+              </div>
+            </div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, tempora.</p>
+          </div>
+          <div class="col-12 col-lg-4 comment1">
+            <div class="row">
+              <div class="col-6">
+                <img src="{{asset('image/nonuser/img-home/people.png')}}">
+              </div>
+              <div class="col-6 profile">
+                <h5>Anindita putri</h5>
+                <p>Students</p> 
+              </div>
+            </div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, tempora.</p>
           </div>
         </div>
       </div>
