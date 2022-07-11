@@ -93,7 +93,7 @@
           <div class="col-12 col-lg-4 comment1">
             <div class="row">
               <div class="col-6">
-                <img src="{{asset('image/nonuser/img-home/people.png')}}">
+                <img src="{{asset('image/nonuser/img-home/people2.png')}}">
               </div>
               <div class="col-6 profile">
                 <h5>Anindita putri</h5>
@@ -105,10 +105,10 @@
           <div class="col-12 col-lg-4 comment1">
             <div class="row">
               <div class="col-6">
-                <img src="{{asset('image/nonuser/img-home/people.png')}}">
+                <img src="{{asset('image/nonuser/img-home/people1.png')}}">
               </div>
               <div class="col-6 profile">
-                <h5>Anindita putri</h5>
+                <h5>Muhammad Aldi</h5>
                 <p>Students</p> 
               </div>
             </div>
@@ -120,7 +120,7 @@
                 <img src="{{asset('image/nonuser/img-home/people.png')}}">
               </div>
               <div class="col-6 profile">
-                <h5>Anindita putri</h5>
+                <h5>Putri Permata Sari</h5>
                 <p>Students</p> 
               </div>
             </div>
@@ -129,6 +129,58 @@
         </div>
       </div>
     </div>
-  @section('footer')
 
+    {{-- Join Section --}}
+    <div class="join">
+      <div class="container">
+        <img src="{{asset('image/nonuser/img-home/icon.svg')}}" alt="">
+        <h4 class="pt-3">25K+ Students are in One Place</h4>
+        <p class="py-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <a href="/login" class="btn btn-primary">Join Now</a>
+      </div>
+    </div>
+
+  @section('footer')
+    <div class="footers">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-3 footer">
+            <img src="{{asset('image/logo.png')}}" alt="">
+            <p class="pt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, maiores!</p>
+          </div>
+          <div class="col-12 col-lg-6 footer1">
+            <div class="row footers1">
+              <div class="col-6 col-md-4 footer2">
+                <h4>Link</h4>
+                <p class="pt-2"><a href="#">Home</a></p>
+                <p><a href="#">About Us</a></p>
+                <p><a href="#">Mentor</a></p>
+                <p><a href="#">Contact Us</a></p>
+              </div>
+              <div class="col-6 col-md-4 footer2">
+                <h4>Social Media</h4>
+                <p class="pt-2"><a href="#">Instagram</a></p>
+                <p><a href="#">Twitter</a></p>
+                <p><a href="#">Behance</a></p>
+                <p><a href="#">Facebook</a></p>
+              </div>
+              <div class="col-6 col-md-4 footer3">
+                <h4>Address</h4>
+                <p class="pt-2">PT. Elhan Kursus 
+                  Indonesia</p>
+                <p>Jl. Raja Isa no. 10, 
+                  Batam Indonesia</p>
+                <p>(021) 54556789</p>
+                <p>team@elhanclub.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bawah mt-5" style="font-size: .9rem;">
+          Copyright &copy; 2021 <script type="text/javascript">
+            new Date().getFullYear()>2021&&document.write("-"+new Date().getFullYear());
+            </script>, Elhan Course.
+        </div>
+      </div>
+    </div>
 @endsection

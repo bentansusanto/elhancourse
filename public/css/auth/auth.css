@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.bg-auth{
+    margin-top: -100px;
+}
+.bg-auth img{
+    height: 102.2vh;
+}
+.form-auth p{
+    width: 17rem;
+}
+form{
+    margin-top: 100px;
+    width: 26rem;
+}
+/* Navbar */
+
+
+/* Login */
+/* Register */
+
+/* Responsive */
+/* Large Desktop */
+@media(min-width: 1200px){
+
+}
+
+/* Medium Desktop */
+@media(min-width: 1025px) and (max-width: 1199px){
+
+}
+
+/* Desktop */
+@media(min-width: 992px) and (max-width: 1024px){
+
+}
+
+/* Tablet */
+@media(min-width: 768px) and (max-width: 991px){
+
+}
+
+/* Handphone */
+@media(max-width: 767px){
+
+}
