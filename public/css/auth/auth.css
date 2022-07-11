@@ -9,8 +9,13 @@
 .bg-auth img{
     height: 102.2vh;
 }
-.form-auth p{
-    width: 17rem;
+.content h1{
+    font-weight: 600;
+}
+.content p{
+    width: 15rem;
+    font-size: .9rem;
+    color: #a4a4a4;
 }
 form{
     margin-top: 100px;

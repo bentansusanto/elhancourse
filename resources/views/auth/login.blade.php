@@ -21,9 +21,11 @@
             <div class="col">
                 <div class="form-auth">
                     <div class="container">
-                        <h1>Sign In</h1>
-                        <p>Welcome back, please login to
-                            your account.</p>
+                        <div class="content">
+                            <h1>Sign In</h1>
+                            <p>Welcome back, please login to
+                                your account.</p>
+                        </div>
                         <form action="/login" method="POST">
                             @csrf
                             @if (session()->has('Success'))
@@ -54,7 +56,7 @@
                                 @enderror
                             </div>
                             <button class="btn btn-primary w-100 mt-3">LOGIN</button>
-                            <p class=" text-center mx-auto mt-2" style="font-size: .9rem;">I don't have account &nbsp; <a href="/register" style="text-decoration: none">Register Now</a></p>
+                            <p class=" text-center mt-2" style="font-size: .9rem;">I don't have account &nbsp; <a href="/register" style="text-decoration: none">Register Now</a></p>
                         </form>
                     </div>
                 </div>

@@ -136,7 +136,7 @@
         <img src="{{asset('image/nonuser/img-home/icon.svg')}}" alt="">
         <h4 class="pt-3">25K+ Students are in One Place</h4>
         <p class="py-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        <a href="/login" class="btn btn-primary">Join Now</a>
+        <a href="/user" class="btn btn-primary">Join Now</a>
       </div>
     </div>
 
