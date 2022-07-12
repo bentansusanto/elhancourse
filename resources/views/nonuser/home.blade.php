@@ -152,10 +152,10 @@
             <div class="row footers1">
               <div class="col-6 col-md-4 footer2">
                 <h4>Link</h4>
-                <p class="pt-2"><a href="#">Home</a></p>
-                <p><a href="#">About Us</a></p>
-                <p><a href="#">Mentor</a></p>
-                <p><a href="#">Contact Us</a></p>
+                <p class="pt-2"><a href="/">Home</a></p>
+                <p><a href="/about">About Us</a></p>
+                <p><a href="/mentor">Mentor</a></p>
+                <p><a href="/contact">Contact Us</a></p>
               </div>
               <div class="col-6 col-md-4 footer2">
                 <h4>Social Media</h4>

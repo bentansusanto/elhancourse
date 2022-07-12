@@ -11,7 +11,7 @@ use App\Http\Controllers\Admin\KategoriController;
 use App\Http\Controllers\Admin\AdminCategoryController;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\MentorController;
-
+use App\Http\Controllers\Nonuser\AboutController;
 use App\Http\Controllers\Nonuser\HomeController;
 // UserController
 use App\Http\Controllers\User\DashboardController;
@@ -50,6 +50,7 @@ Route::controller(AuthController::class)->group(function(){
 
 // Nonuser
 Route::get('/',[HomeController::class,'home']);
+Route::get('/about',[AboutController::class,('about')]);
 
 // User
 Route::get('/user',[DashboardController::class,'dashboard'])->middleware('auth');
