@@ -37,7 +37,7 @@
           <div class="col-12 col-lg-6">
               <h1>Don’t just dream <br> Learn with us</h1>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-              <a href="/user" class="btn btn-primary shadow">Get Started</a>
+              <a href="/user" class="btn btn-primary shadow" style="text-decoration: none; background-color: #0E3EDA;">Get Started</a>
           </div>
         </div>
       </div>

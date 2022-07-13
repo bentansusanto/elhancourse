@@ -49,8 +49,12 @@ Route::controller(AuthController::class)->group(function(){
 });
 
 // Nonuser
-Route::get('/',[HomeController::class,'home']);
-Route::get('/about',[AboutController::class,('about')]);
+Route::controller(HomeController::class)->group(function(){
+    Route::get('/','home');
+    Route::get('/about','about');
+    Route::get('/mentor','mentor');
+    Route::get('/contact','contact');
+});
 
 // User
 Route::get('/user',[DashboardController::class,'dashboard'])->middleware('auth');

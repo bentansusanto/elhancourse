@@ -7,6 +7,9 @@
 .btn{
     background-color: #0E3EDA;
 }
+p{
+    font-size: .9rem;
+}
 
 /* Navbar */
 .nav-link{
@@ -19,6 +22,8 @@
 .nav-log{
     font-weight: 500;
 }
+
+
 /* Homepage */
 /* Hero Section */
 .heros h1{
@@ -80,7 +85,7 @@
 
 /* Comments */
 .comments{
-    margin-top: 200px;
+    margin-top: 3∫00px;
 }
 .comments h4{
     color: #ED1675;
@@ -102,9 +107,9 @@
     background-color: #ffff;
     box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.1);
 }
-.comment1 p{
+/* .comment1 p{
     font-size: .9rem;
-}
+} */
 .comment1 p:nth-child(3){
     color: #a4a4a4;
 }
@@ -131,22 +136,79 @@
     margin: auto;
     color: #a4a4a4;
 }
+.join a{
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
+}
 
 
 /* About Page */
-/* Hero Section */
-.tentangs{
-    margin-top: 150px;
-}
-.tentang img{
-    width: 100%;
-}
-.tentang h2{
+ /* Hero Section */
+ .tentangs{
+    margin-top: 100px;
+ }
+ .tentang{
+    text-align: left;
+ }
+ .tentang img{
+    width: 70%;
+ }   
+ .tentang h2{
+    font-weight: 700;
+    margin-top: 50px;
+    padding-bottom: 15px;
+ }
+ .tentang p{
+    margin: unset;
+    width: 80%;
+ }
+
+ /* Review Section */
+ .reviews{
+    margin: 150px auto;
+    text-align: center;
+ }
+ .review{
+     margin-top: 50px;
+ }
+ .review h4{
+    color: #0E3EDA;
     font-weight: 600;
-}
+    font-size: 1.8rem;
+ }
+
+ /* Mentor Section */
+ .mentors{
+    margin-bottom: 200px;
+ }
+ .mentor img{
+    width: 100%;
+ } 
+ .mentor h4{
+    color: #ED1675;
+    font-size: .9rem;
+ }
+ .mentor h2{
+    font-weight: 700;
+ }
+ .mentor p{
+    padding: 20px 0;
+ }
 
 
-
+ /* Mentor Page */
+ /* Hero Section */
+ .teachers{
+    margin-top: 100px;
+    margin-bottom: 200px;
+    text-align: center;
+ }
+ .teachers h2{
+    font-weight: 700;
+ }
+ .teachers p{
+    color: #a4a4a4;
+    font-size: .9rem;
+ }
 
 /* Footer */
 .footers{
@@ -168,6 +230,9 @@
 .footer1 a{
     color: #000;
     text-decoration: none;
+}
+.footer1 a:hover{
+    color: #0E3EDA;
 }
 
 
@@ -262,7 +327,7 @@
         font-size: 1.6rem;
     }
     .comment1{
-        width: 23rem;
+        width: 22rem;
         margin-top: 15px;
         margin-left: 15px;
         padding: 10px 10px;
@@ -287,6 +352,52 @@
     .tentang p{
         margin: unset;
         width: 70%;
+    }
+
+    /* Review Section */
+    .review h4{
+        color: #0E3EDA;
+        font-size: 1.8rem;
+    }
+
+    /* Mentor Section */
+    .mentor{
+        text-align: left;
+    }
+    .mentor img{
+        margin-left: 100px;
+        width: 70%;
+    }
+    .mentor h4{
+        margin-top: 50px;
+    }
+    .mentor h2{
+        margin: unset;
+        font-size: 2rem;
+        width: 95%;
+    }
+    .mentor p{
+        margin: unset;
+        width: 70%;
+    }
+
+
+    /* Mentor Page */
+    /* Hero Section */
+    .teachers h2, .teachers p{
+        margin: auto;
+    }
+    .teachers h2{
+        width: 35%;
+    }
+    .teachers p{
+        width: 25%;
+        padding-top: 10px;
+    }
+
+    /* Footer */
+    .footer1{
+        margin-left: 200px;
     }
 }
 
@@ -403,6 +514,42 @@
         width: 80%;
     }
 
+    /* Mentor Section */
+    .mentor{
+        text-align: left;
+    }
+    .mentor img{
+        margin-left: 100px;
+        width: 75%;
+    }
+    .mentor h4{
+        margin-top: 50px;
+    }
+    .mentor h2{
+        margin: unset;
+        font-size: 1.8rem;
+        width: 95%;
+    }
+    .mentor p{
+        margin: unset;
+        padding: 10px 0;
+        width: 80%;
+    }
+
+
+     /* Mentor Page */
+    /* Hero Section */
+    .teachers h2, .teachers p{
+        margin: auto;
+    }
+    .teachers h2{
+        width: 45%;
+    }
+    .teachers p{
+        width: 35%;
+        padding-top: 10px;
+    }
+
     /* Footer */
     .footers1 {
         margin-top: unset;
@@ -505,7 +652,6 @@
         margin-left: -80px;
     }
 
-
     /* About Page */
     /* Hero Section */
     .tentang{
@@ -523,6 +669,41 @@
         width: 80%;
     }
 
+    /* Mentor Section */
+    .mentor{
+        text-align: left;
+    }
+    .mentor img{
+        margin-left: 50px;
+        width: 75%;
+    }
+    .mentor h4{
+        margin-top: 50px;
+    }
+    .mentor h2{
+        margin: unset;
+        font-size: 1.8rem;
+        width: 95%;
+    }
+    .mentor p{
+        margin: unset;
+        padding: 10px 0;
+        width: 75%;
+    }
+
+
+     /* Mentor Page */
+    /* Hero Section */
+    .teachers h2, .teachers p{
+        margin: auto;
+    }
+    .teachers h2{
+        width: 50%;
+    }
+    .teachers p{
+        width: 35%;
+        padding-top: 10px;
+    }
 
     /* Footer */
     .footers1 {
@@ -624,7 +805,6 @@
         margin-left: -80px;
     }
     
-
     /* About Page */
     /* Hero Section */
     .tentang{
@@ -640,6 +820,41 @@
     .tentang p{
         margin: auto;
         width: 70%;
+    }
+
+    /* Mentor Section */
+    .mentor{
+        text-align: center;
+    }
+    .mentor img{
+        margin: auto;
+        width: 70%;
+    }
+    .mentor h4{
+        margin-top: 50px;
+    }
+    .mentor h2{
+        margin: auto;
+        font-size: 1.8rem;
+        width: 65%;
+    }
+    .mentor p{
+        margin: auto;
+        padding: 10px 0;
+        width: 55%;
+    }
+
+    /* Mentor Page */
+    /* Hero Section */
+    .teachers h2, .teachers p{
+        margin: auto;
+    }
+    .teachers h2{
+        width: 60%;
+    }
+    .teachers p{
+        width: 45%;
+        padding-top: 10px;
     }
 
     /* Footer */
@@ -710,7 +925,7 @@
         font-size: 1.5rem;
     }
     .kategoris{
-        width: 15rem;
+        width: 15rem !important;
         margin: 10px auto;
     }
 
@@ -740,7 +955,7 @@
     .comment1{
         width: 23rem;
         margin-top: 15px;
-        margin-left: unset;
+        margin-left: unset ;
         padding: 10px 10px;
     }
     .profile{
@@ -757,10 +972,59 @@
         width: 100%;
     }
     .tentang h2{
+        font-size: 1.8rem;
         margin-top: 50px;
         padding-bottom: 15px;
     }
+    .tentang p{
+        margin: auto;
+        width: 100%;
+    }
 
+    /* Review Section */
+    .reviews{
+        margin: 150px auto;
+        text-align: center;
+    }
+    .review{
+        margin-top: 50px;
+    }
+
+    /* Mentor Section */
+    .mentor{
+        text-align: center;
+    }
+    .mentor img{
+        margin: auto;
+        width: 100%;
+    }
+    .mentor h4{
+        margin-top: 50px;
+    }
+    .mentor h2{
+        font-size: 1.5rem;
+        width: 100%;
+    }
+    .mentor p{
+        padding: 10px 0;
+        width: 100%;
+    }
+
+
+    /* Mentor Page */
+    /* Hero Section */
+    .teachers h2, .teachers p{
+        margin: auto;
+    }
+    .teachers h2{
+        width: 90%;
+    }
+    .teachers p{
+        width: 80%;
+        padding-top: 10px;
+    }
+
+    
     /* Footer */
     .footers1 {
         margin-top: 50px;

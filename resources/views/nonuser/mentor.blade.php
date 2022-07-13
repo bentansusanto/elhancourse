@@ -1,6 +1,6 @@
 @extends('nonuser.main')
 
-@section('title','About Elhan Course')
+@section('title','Mentor Elhan Course')
 
 @section('navbar')
 <nav class="navbar navbar-expand-lg bg-transparent">
@@ -26,60 +26,12 @@
     </div>
   </nav>
 @section('content')
-  {{-- Hero Section --}}
-  <div class="tentangs">
+  <div class="teachers">
     <div class="container">
-        <div class="row tentang">
-            <div class="col-12 col-lg-6">
-                <img src="{{asset('image/nonuser/img-about/bg-hero.png')}}" alt="">
-            </div>
-            <div class="col-12 col-lg-6">
-                <h2>Help People to Grow</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quae pariatur necessitatibus est soluta commodi nemo eos labore ducimus voluptates.</p>
-                <p class="pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quae pariatur necessitatibus est soluta commodi nemo eos labore ducimus voluptates.</p>
-            </div>
-        </div>
+        <h2>Best Mentor With Many Experience</h2>
+        <p>Di Elhan Club memiliki mentor-mentor terbaik yang sudah berpengalaman di bidangnya.</p>
     </div>
   </div>
-
-  {{-- Review Section --}}
-  <div class="reviews">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-sm-4 review">
-          <h4>25.000</h4>
-          <p>Success Member</p>
-        </div>
-        <div class="col-12 col-sm-4 review">
-          <h4>180</h4>
-          <p>High Quality Course</p>
-        </div>
-        <div class="col-12 col-sm-4 review">
-          <h4>4,8</h4>
-          <p>Rating Course</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  {{-- Mentor Section --}}
-  <div class="mentors">
-    <div class="container">
-      <div class="row flex-row-reverse">
-        <div class="col-12 col-lg-6 mentor">
-          <img src="{{asset('image/nonuser/img-home/bg-hero.png')}}" >
-        </div>
-        <div class="col-12 col-lg-6 mentor">
-          <h4>Learn From Master</h4>
-          <h2>Menyajikan Konten Edukasi <br> Oleh Mentor Berpengalaman</h2>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In eum exercitationem nostrum laborum porro ipsam cum eos doloremque? Aut, minima.</p>
-          <a href="/mentor" class="btn btn-primary shadow">View All Mentors</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
 @section('footer')
 <div class="footers">
     <div class="container">
