@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('mentors', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('category_id');
             $table->string('name');
             $table->string('email')->unique();
             $table->longText('quotes');
-            $table->string('social_media');
             $table->string('image');
             $table->timestamps();
         });

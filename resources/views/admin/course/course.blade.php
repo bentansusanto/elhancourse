@@ -16,7 +16,7 @@
         @foreach ($categories as $category)
         <ul class="list-group w-25 mt-3">
             <li class="list-group-item disabled" aria-disabled="true">{{$category->name}}</li>
-            @foreach ($category->courses as $category )
+            @foreach ($category->courses as $course)
               <li class="list-group-item">{{$course->title}}</li>        
             @endforeach
           </ul>     

@@ -15,7 +15,7 @@
         <div class="navbar-nav">
           <a class="nav-link" href="/">Home</a>
           <a class="nav-link" href="/about">About Us</a>
-          <a class="nav-link" href="/mentor">Mentor</a>
+          <a class="nav-link" href="/teacher">Mentor</a>
           <a class="nav-link" href="/contact">Contact Us</a>
         </div>
         <div class="sign-inup">

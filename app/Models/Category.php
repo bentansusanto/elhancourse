@@ -15,4 +15,9 @@ class Category extends Model
     {
         return $this->hasMany(Course::class);
     }
+
+    public function mentors()
+    {
+        return $this->hasMany(Mentor::class);
+    }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Course;
+use App\Models\Mentor;
 use Illuminate\Http\Request;
 
 class AdminCategoryController extends Controller
@@ -16,7 +17,7 @@ class AdminCategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::with('course')->get();
+        $categories = Category::with('courses')->get();
         return view('admin.course.course', compact('categories'));
     }
 
@@ -39,12 +40,14 @@ class AdminCategoryController extends Controller
     public function store(Request $request)
     {
         $validateData = $request->validate([
-            'name' => 'required'
+            'name' => 'required',
         ]);
-
-        Course::create($validateData);
+        
         $validateData['name'] = ucwords($validateData['name']);
-        return redirect('/course')->with('Success','Category berhasi ditambahkan');
+        
+        Category::create($validateData); 
+
+        return redirect('/courses')->with('Success','Create Category Successfully');
     }
 
     /**

@@ -18,7 +18,7 @@ class AdminCourseController extends Controller
     public function index()
     {
        $categories = Category::with('courses')->get();
-       $mentors = Mentor::with('course')->get();
+       $mentors = Mentor::with('courses')->get();
        return view('admin.course.course', compact(['categories','mentors']));
     }
 
@@ -56,7 +56,7 @@ class AdminCourseController extends Controller
         //  membuat semua value course
         $course = Course::create($request->all());
 
-        $course->name = ucwords($course->name);
+        $course->title = ucwords($course->title);
         // mengecek tipe file image dan mengirim ke database
         if($request->hasFile('image'))
         {
@@ -117,7 +117,7 @@ class AdminCourseController extends Controller
         ]);
 
         $course = Course::find($course->id);
-        $course->name = ucwords($course->name);
+        $course->title = ucwords($course->title);
         if($request->hasFile('image'))
         {
             $request->file('image')->move('course', $request->file('image')->getClientOriginalName());

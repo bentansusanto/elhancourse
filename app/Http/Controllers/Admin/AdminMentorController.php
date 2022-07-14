@@ -3,13 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Course;
+use App\Models\Category;
 use App\Models\Mentor;
 use Illuminate\Http\Request;
 
-use function Ramsey\Uuid\v1;
-
-class MentorController extends Controller
+class AdminMentorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,10 +15,9 @@ class MentorController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        $mentors = Mentor::with('course')->get();
-
-        return view('mentor.mentor', compact('mentors'));
+    {   
+        $mentors = Mentor::with('category')->get();
+        return view('admin.mentor.mentor',compact('mentors'));
     }
 
     /**
@@ -30,7 +27,9 @@ class MentorController extends Controller
      */
     public function create()
     {
-        return view('mentor.create');
+        return view('admin.mentor.create',[
+            'categories' => Category::all()
+        ]);
     }
 
     /**
@@ -40,17 +39,20 @@ class MentorController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        $request->validate([
+    {   
+        // dd($request->all());
+
+         $request->validate([
             'name' => 'required',
+            'category_id' => 'required',
             'email' => 'required|email:dns',
             'quotes' => 'required',
-            'social_media' => 'required',
             'image' => 'required|file|max:1024'
         ]);
 
+        
         $mentor = Mentor::create($request->all());
-
+        
         $mentor->name = ucwords($mentor->name);
 
         if($request->hasFile('image'))
@@ -60,7 +62,7 @@ class MentorController extends Controller
             $mentor->save();
         }
 
-        return redirect('/mentor')->with('Success','Mentor behasil ditambahkan');
+        return redirect('/mentors')->with('Success','Create Mentor Successfully');
     }
 
     /**
@@ -71,8 +73,8 @@ class MentorController extends Controller
      */
     public function show(Mentor $mentor)
     {
-        return view('mentor.detail',[
-            'courses' => Course::all()
+        return view('admin.mentor.detail',[
+            'categories' => Category::all()
         ], compact('mentor'));
     }
 
@@ -84,7 +86,7 @@ class MentorController extends Controller
      */
     public function edit(Mentor $mentor)
     {
-        return view('mentor.edit');
+        return view('admin.mentor.edit',compact('mentor'));
     }
 
     /**
@@ -98,16 +100,16 @@ class MentorController extends Controller
     {
         $request->validate([
             'name' => 'required',
+            'category_id' => 'required',
             'email' => 'required|email:dns',
             'quotes' => 'required',
-            'social_media' => 'required',
             'image' => 'required|file|max:1024'
         ]);
 
         $mentor = Mentor::find($mentor->id);
+        $mentor->update($request->all());
 
         $mentor->name = ucwords($mentor->name);
-
         if($request->hasFile('image'))
         {
             $request->file('image')->move('mentor', $request->file('image')->getClientOriginalName());
@@ -115,9 +117,8 @@ class MentorController extends Controller
             $mentor->save();
         }
 
-        return redirect('/mentor')->with('Success','Mentor behasil diubah');
+        return redirect('/mentors')->with('Success','Update Mentor Successfully');
     }
-    
 
     /**
      * Remove the specified resource from storage.
@@ -128,7 +129,7 @@ class MentorController extends Controller
     public function destroy(Mentor $mentor)
     {
         Mentor::destroy($mentor->id);
-
-        return redirect('/mentor')->with('Success','Mentor behasil dihapus');
+        
+        return redirect('/mentors')->with('Success','Delete Mentor Successfully');
     }
 }

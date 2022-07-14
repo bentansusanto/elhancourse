@@ -16,7 +16,7 @@ class Course extends Model
         return $this->belongsTo(Category::class);
     }
 
-    protected function mentor()
+    public function mentor()
     {
         return $this->belongsTo(Mentor::class);
     }

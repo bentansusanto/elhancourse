@@ -22,9 +22,9 @@ class HomeController extends Controller
 
     public function mentor()
     {
-        $mentors = Mentor::all();
+        $mentors = Mentor::with('category')->get();
 
-        return view('nonuser.mentor', compact('mentors'));   
+        return view('nonuser.mentor', compact('mentors'));
     }
 
     public function contact()

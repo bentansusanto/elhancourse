@@ -15,7 +15,7 @@
         <div class="navbar-nav">
           <a class="nav-link" href="/">Home</a>
           <a class="nav-link" href="/about">About Us</a>
-          <a class="nav-link" href="/mentor">Mentor</a>
+          <a class="nav-link" href="/teacher">Mentor</a>
           <a class="nav-link" href="/contact">Contact Us</a>
         </div>
         <div class="sign-inup">
@@ -30,8 +30,14 @@
     <div class="container">
         <h2>Best Mentor With Many Experience</h2>
         <p>Di Elhan Club memiliki mentor-mentor terbaik yang sudah berpengalaman di bidangnya.</p>
+        <div class="row">
+          <div class="col">
+            <img src="">
+          </div>
+      </div>
     </div>
   </div>
+  
 @section('footer')
 <div class="footers">
     <div class="container">

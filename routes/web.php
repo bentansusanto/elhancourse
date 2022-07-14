@@ -10,13 +10,12 @@ use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\KategoriController;
 use App\Http\Controllers\Admin\AdminCategoryController;
 use App\Http\Controllers\Admin\AdminHomeController;
-use App\Http\Controllers\Admin\MentorController;
-use App\Http\Controllers\Nonuser\AboutController;
-use App\Http\Controllers\Nonuser\HomeController;
+use App\Http\Controllers\Admin\AdminMentorController;
 // UserController
 use App\Http\Controllers\User\DashboardController;
 
 // NonuserController
+use App\Http\Controllers\Nonuser\HomeController;
 
 
 
@@ -26,9 +25,9 @@ Route::get('/dashboard',[AdminHomeController::class,'dashboard']);
 
 Route::resource('/courses', AdminCourseController::class);
 
-Route::resource('/mentors', MentorController::class);
-
 Route::resource('/blogs',BlogController::class);
+
+Route::resource('/mentors', AdminMentorController::class);
 
 Route::resource('/kategoris',KategoriController::class);
 
@@ -52,7 +51,7 @@ Route::controller(AuthController::class)->group(function(){
 Route::controller(HomeController::class)->group(function(){
     Route::get('/','home');
     Route::get('/about','about');
-    Route::get('/mentor','mentor');
+    Route::get('/teacher','mentor');
     Route::get('/contact','contact');
 });
 

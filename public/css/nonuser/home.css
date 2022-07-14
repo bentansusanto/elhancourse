@@ -85,7 +85,7 @@ p{
 
 /* Comments */
 .comments{
-    margin-top: 3∫00px;
+    margin-top: 200px;
 }
 .comments h4{
     color: #ED1675;
@@ -299,7 +299,7 @@ p{
         font-size: 1.5rem;
     }
     .kategoris{
-        width: 18rem;
+        width: 16rem;
         margin: 10px 10px;
     }
 
