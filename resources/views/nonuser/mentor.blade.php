@@ -31,8 +31,11 @@
         <h2>Best Mentor With Many Experience</h2>
         <p>Di Elhan Club memiliki mentor-mentor terbaik yang sudah berpengalaman di bidangnya.</p>
         <div class="row">
-          <div class="col">
-            <img src="">
+          <div class="col-12 col-md-6 col-lg-4 teacher">
+              <img src="{{asset('image/nonuser/img-mentor/icons8-team-FcLyt7lW5wg-unsplash.jpg')}}" class="clip-circle">
+              <h4>Benny Tan Susanto</h4>
+              <p>IT</p>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione maiores tenetur blanditiis fuga, sapiente id dolores!</p>
           </div>
       </div>
     </div>
