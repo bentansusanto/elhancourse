@@ -1,6 +1,6 @@
 @extends('nonuser.main')
 
-@section('title','Mentor Elhan Course')
+@section('title','Contact Us')
 
 @section('navbar')
 <nav class="navbar navbar-expand-lg bg-transparent">
@@ -25,29 +25,33 @@
       </div>
     </div>
   </nav>
-@section('content')
-  <div class="teachers">
-    <div class="container">
-        <h2>Best Mentor With Many Experience</h2>
-        <p>Di Elhan Club memiliki mentor-mentor terbaik yang sudah berpengalaman di bidangnya.</p>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row row-cols-auto teacher">
-        @foreach ($mentors as $mentor)
-        <div class="col-12 col-md-6 col-lg-4 teacher1">
-          <div class="circle">
-            <img src="{{asset('image/nonuser/img-mentor/icons8-team-FcLyt7lW5wg-unsplash.jpg')}}">
-          </div>
-          <h4>{{$mentor->name}}</h4>
-          <p style="font-weight:500; color: #a4a4a4;">{{$mentor->category->name}} Teacher</p>
-          <p >{{$mentor->quotes}}</p>
-        </div>
-        @endforeach
 
+
+@section('content')
+  <div class="kontaks">
+    <div class="container">
+        <div class="row flex-row-reverse kontak">
+            <div class="col-12 col-lg-6">
+                <img src="{{asset('image/nonuser/img-contact/bg-contact.png')}}" alt="">
+            </div>
+            <div class="col-12 col-lg-6">
+                <h2>We’re Happy to <br> Help You Today!</h2>
+                <p>Hubungi kami melalui salah satu channel yang telah kami sediakan di bawah atau melaui media social kami.</p>
+            </div>
+        </div>
     </div>
+  </div>
+
+  <div class="kontaks1">
+    <div class="container">
+        <div class="kontak1">
+            <img src="{{asset('image/nonuser/img-contact/icon-contact.svg')}}" >
+            <h4 class="text-capitalize">kontak melalui whatsapp</h4>
+            <a href="#">Chat Now</a>
+        </div>
     </div>
-  
+  </div>
+
 @section('footer')
 <div class="footers">
     <div class="container">
