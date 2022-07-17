@@ -48,14 +48,18 @@
                                     <div class="invalid-feedback">{{$message}}</div>
                                 @enderror
                             </div>
-                              <div class="form-floating">
+                              <div class="form-floating mb-3">
                                 <input type="password" class="form-control @error('password') is-invalid @enderror" id="floatingPassword" name="password">
                                 <label for="floatingPassword">Password</label>
                                 @error('password')
                                     <div class="invalid-feedback">{{$message}}</div>
                                 @enderror
                             </div>
-                            <button class="btn btn-primary w-100 mt-3">LOGIN</button>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label style="font-size: .9rem;" class="form-check-label" for="exampleCheck1">Remember Me</label>
+                              </div>
+                            <button class="btn btn-primary w-100">LOGIN</button>
                             <p class=" text-center mt-2" style="font-size: .9rem;">I don't have account &nbsp; <a href="/register" style="text-decoration: none">Register Now</a></p>
                         </form>
                     </div>

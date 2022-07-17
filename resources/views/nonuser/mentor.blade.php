@@ -62,7 +62,7 @@
               <h4>Link</h4>
               <p class="pt-2"><a href="/">Home</a></p>
               <p><a href="/about">About Us</a></p>
-              <p><a href="/mentor">Mentor</a></p>
+              <p><a href="/teacher">Mentor</a></p>
               <p><a href="/contact">Contact Us</a></p>
             </div>
             <div class="col-6 col-md-4 footer2">
